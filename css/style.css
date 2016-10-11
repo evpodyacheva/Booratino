@@ -1,0 +1,632 @@
+/*Start: Reset margin and padding*/
+h1, h2, h3, h4, h5, h6, p, ul, li, blockquote, figure {
+    margin: 0;
+    padding: 0;
+}
+/*End: Reset margin and padding*/
+
+/*Start: Fonts*/
+@font-face {
+    font-family: 'BebasNeueREgular';
+    src: url('../fonts/BebasNeueRegular.eot'),
+    url('../fonts/BebasNeueRegular.ttf'),
+    url('../fonts/BebasNeueRegular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*End: Fonts*/
+
+/*Start: Grid*/
+.column1 {  width: 8.33%;  }
+.column2 {  width: 16.66%; }
+.column3 {  width: 25%;    }
+.column4 {  width: 33.33%; }
+.column5 {  width: 41.66%; }
+.column6 {  width: 50%;    }
+.column7 {  width: 58.33%; }
+.column8 {  width: 66.66%; }
+.column9 {  width: 75%;    }
+.column10 {  width: 83.11%;}
+.column11 {  width: 91.66%;}
+.column12 {  width: 100%;  }
+
+.offset1 { margin-left: 8.33%; }
+.offset2 { margin-left: 16.66%; }
+.offset3 { margin-left: 25%; }
+.offset4 { margin-left: 33.33%; }
+.offset5 { margin-left: 41.66%; }
+.offset6 { margin-left: 50%; }
+
+div[class*="column"] {
+    float: left;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row { margin-left: -15px;  margin-right: -15px; }
+
+.row:after,.clearfix:after {content:""; display: block; clear: both;}
+
+.pull-right {float:right}  .pull-left{float:left}
+
+.text-right{text-align:right;} .text-center{text-align:center;}
+
+.inline-block {display: inline-block;}
+
+.container{ width: 1170px; margin: 0 auto; padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*End: Grid*/
+
+/*Start: Style for body*/
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1900px;
+    background: #fff url(../img/bg-body-texture.png) top left repeat;
+
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #000;
+}
+
+div[class*="col"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-normal {
+    font-weight: 400;
+}
+
+.text-brown {
+    color: #543818;
+}
+
+.text-brown-lite {
+    color: #8d6d46;
+}
+
+.second-title {
+    margin-bottom: 40px;
+
+    font-family: 'BebasNeueREgular', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.block-shadow {
+    -webkit-box-shadow: 0 -8px 25px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 -8px 25px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 -8px 25px 0 rgba(0, 0, 0, .2);
+}
+
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+/*End: Style for body*/
+
+/*Start: Header*/
+header {
+    padding-top: 30px;
+
+    background: url('../img/bg-header.jpg') top center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.logo {
+    position: relative;
+    text-align: right;
+
+    border: 3px solid #fff;
+    border-bottom: none;
+}
+
+.logo:before {
+    content: '';
+    display: inline-block;
+
+    width: 215px;
+    height: 507px;
+    background: url("../img/header-iphone.png") center no-repeat;
+
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 7%;
+    z-index: 100;
+}
+
+.logo-brend {
+    margin-bottom: 100px;
+    padding: 30px 15px 0 0;
+}
+
+.sublogo {
+    margin: 0 -15px;
+    padding-right: 5px;
+    background: #000;
+
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 39px;
+
+    position: relative;
+}
+
+.sublogo:before {
+    content: '';
+    display: inline-block;
+
+    width: 217px;
+    height: 70px;
+    background: url("../img/header-decor-iphone.png") center no-repeat;
+
+    position: absolute;
+    right: 20px;
+    top: -70px;
+}
+
+.header-info {
+    font-family: 'BebasNeueREgular', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    line-height: 53px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header-info h1 a {
+    margin: 110px 0 70px;
+    padding: 0 15px;
+    display: inline-block;
+    width: 100%;
+
+    font-family: 'BebasNeueREgular', sans-serif;
+    font-size: 62px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    border: 3px solid #fff;
+}
+
+.header-info h1 a:link, .header-info h1 a:visited, .header-info h1 a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-info h1 a:hover {
+    text-shadow: 2px 2px 3px #000;
+    border: 3px double #fff;
+}
+
+.header-info p {
+    font-family: 'BebasNeueREgular', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+/*End: Header*/
+
+/*Start: Subheader*/
+.subheader {
+    background: #fff;
+}
+
+div[class*="column"].subheader-title {
+    background: url("../img/bg-subheader-title.jpg") top left repeat;
+    padding: 60px 15px;
+    border: 3px solid #fff;
+    border-top: none;
+}
+
+.subheader-title__content {
+    font-family: 'BebasNeueREgular', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.subheader-title__content h2 {
+    color: #fff;
+    font-size: 47px;
+    line-height: 53px;
+    font-weight: 700;
+}
+
+.subheader__title--brown {
+    color: #d7b790;
+}
+
+.subheader__title--large {
+    font-size: 53px;
+}
+
+.subheader__info p {
+    padding: 25px 0 25px 20px;
+    position: relative;
+}
+
+.subheader__info p:before {
+    content: '';
+    display: inline-block;
+
+    width: 65px;
+    height: 175px;
+    background: url("../img/sabheader-iphone.png") center no-repeat;
+
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: -15%;
+}
+/*End: Subheader*/
+
+/*Start: Info-block*/
+.info-block {
+    padding: 45px 0;
+}
+
+.info-block__img {
+    position: relative;
+}
+
+.info-block__img img {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+/*End: Info-block*/
+
+/*Start: Material*/
+.material {
+    padding: 45px 0;
+    background: url("../img/bg-light-wood.jpg") top left repeat;
+}
+
+.material-item img {
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.material-item img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+/*End: Material*/
+
+/*Start: Advantages*/
+.advantages {
+    padding: 45px 0;
+}
+
+.advantages-img {
+    margin-top: 50px;
+}
+
+.advantages ul li {
+    margin-bottom: 30px;
+    padding-left: 50px;
+    list-style-type: none;
+    position: relative;
+}
+
+.advantages ul li:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/ico-mark.png") center no-repeat;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.advantages-title h3 {
+    font-size: 57px;
+}
+
+.advantages-title h3 span {
+    display: block;
+}
+/*End: Advantages*/
+
+/*Start: Product*/
+.product {
+    padding: 45px 0;
+    background: url("../img/bg-dark-wood.jpg") top left repeat;
+}
+
+.product-item {
+    padding: 30px 10px;
+    height: 532px;
+    text-align: center;
+    background: url("../img/bg-body-texture.png") top left repeat;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.product-item h3 {
+    font-family: 'BebasNeueREgular', sans-serif;
+    color: #543818;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-item__img {
+    margin-bottom: 30px;
+    min-height: 314px;
+    max-height: 314px;
+    position: relative;
+}
+
+.product-item__img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.price {
+    margin-bottom: 20px;
+    font-family: 'BebasNeueREgular', sans-serif;
+    font-size: 38px;
+}
+
+.price--old {
+    color: #909090;
+    text-decoration: line-through;
+}
+
+.price--new {
+    font-family: 'BebasNeueREgular', sans-serif;
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.product-item-btn {
+    display: inline-block;
+    width: 90%;
+
+    font-family: 'BebasNeueREgular', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    background-image: -moz-linear-gradient(to top, #543818 0%, #8d6d46 100%);
+    background-image: -webkit-linear-gradient(to top, #543818 0%, #8d6d46 100%);
+    background-image: -o-linear-gradient(to top, #543818 0%, #8d6d46 100%);
+    background-image: -ms-linear-gradient(to top,#543818 0%, #8d6d46 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#543818), to(#8d6d46));
+    background-image: linear-gradient(to top, #543818 0%, #8d6d46 100%);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.product-item-btn:link, .product-item-btn:visited, .product-item-btn:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.product-item-btn:hover {
+    background-image: -moz-linear-gradient(to top, #8d6d46 0%, #543818 100%);
+    background-image: -webkit-linear-gradient(to top, #8d6d46 0%, #543818 100%);
+    background-image: -o-linear-gradient(to top, #8d6d46 0%, #543818 100%);
+    background-image: -ms-linear-gradient(to top,#8d6d46 0%, #543818 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#8d6d46), to(#543818));
+    background-image: linear-gradient(to top, #8d6d46 0%, #543818 100%);
+}
+/*End: Product*/
+
+/*Start: Production*/
+.production {
+    padding: 45px 0;
+}
+
+.production img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.production-row {
+    margin-bottom: 35px;
+}
+
+.production-row iframe {
+    margin: 0 auto;
+    max-width: 100%;
+    display: block;
+}
+/*End: Production*/
+
+/*Start: reviews*/
+.reviews {
+    padding: 45px 0;
+    background: url("../img/bg-light-wood.jpg") top left repeat;
+}
+
+.reviews-item {
+    margin-bottom: 30px;
+}
+
+.reviews-item:last-child {
+    margin-bottom: 0;
+}
+
+.reviews-item__text {
+    margin-left: 35px;
+    padding: 10px 20px;
+    background: url("../img/bg-body-texture.png") top left repeat;
+
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 400;
+
+    position: relative;
+    z-index: 2;
+}
+
+.reviews-item__text:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 27px;
+    background: url("../img/reviews-popup.png") center no-repeat;
+
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+
+.reviews-item-shadow {
+    position: relative;
+}
+
+.reviews-item-shadow:before, .reviews-item-shadow:after {
+    content: '';
+    display: inline-block;
+    width: 50%;
+    height: 10%;
+
+    position: absolute;
+    bottom: 17px;
+    left: 37px;
+    z-index: 0;
+
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,0.7);
+    -o-box-shadow: 0 15px 20px rgba(0,0,0,0.7);
+    box-shadow: 0 15px 20px rgba(0,0,0,0.7);
+
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+.reviews-item-shadow:after {
+    left: auto;
+    right: 6px;
+
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+/*Start: reviews*/
+
+/*Start: footer*/
+footer {
+    padding: 45px 0;
+}
+
+.footer-logo {
+    margin-top: 70px;
+}
+
+.footer-logo img, .footer-logo p {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.footer-logo img {
+    margin-right: 30px;
+}
+
+.footer-logo p {
+    width: 61%;
+    font-family: 'BebasNeueREgular', sans-serif;
+    color: #543818;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.footer-logo .text-brown-lite--large {
+    font-size: 54px;
+    line-height: 1;
+}
+
+.footer-form {
+    border: 3px solid #543818;
+    position: relative;
+}
+
+.footer-form iframe {
+    width: 63%;
+}
+
+.footer-form:after {
+    content: '';
+    display: inline-block;
+    width: 156px;
+    height: 400px;
+    background: url("../img/footer-iphone.png") center no-repeat;
+
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/*End: footer*/
